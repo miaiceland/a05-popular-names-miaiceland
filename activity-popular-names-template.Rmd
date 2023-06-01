@@ -1,0 +1,160 @@
+---
+title: 'Activity: Popular Names'
+author: "YOUR NAME HERE"
+date: "DUE DATE"
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+  pdf_document: default
+---
+
+
+# Grading
+
+Assignment is worth a total of 10 points
+
+* [1 point] Turn in BOTH RNotebook (.nb.html) and the RMarkdown (.Rmd) file to Canvas
+* [1 point] Changes pushed to GitHub
+* [1 point] Step 1: show how you used summary functions to explore the raw data set
+* [1 point] Step 3 and 4: attempt to answer all questions about the data
+* [1 point] Step 5: explanation of data wrangling steps in English (not code)
+* [3 points] Step 7: Data wrangling
+    * correct use of `filter()`
+    * correct use of `group_by()`
+    * correct use of `summarise()`
+* [2 points] `ggplot()` graph of first names 
+
+
+
+# Set Up
+
+```{r, message = F, warning = F}
+# load necessary packages
+library(tidyverse)
+library(mosaic)
+library(esquisse)
+
+
+# Load the BabyNames data into RStudio environment (from dcData package)
+data("BabyNames", package = "dcData")
+```
+
+# Activity
+
+**Goal**: By the end of the activity, each team will create a graph (like Figure A.1 on p 159) showing ups and downs in the popularity of the names at your table according to the U.S. social security registry.  
+
+For steps 5-7, pick any FIVE names you wish. I choose Arnaldo, Ahmid, Nicho, Jennaveve, and Christy. You may choose these names or any others that you would like. 
+
+
+### Step 1
+
+*Examine the data you have at hand - for this project the data are the ones available in the `BabyNames` data set. Use at least 2 different functions to examine your data. Then answer the questions: What are the variables are available? What is a case?*
+
+My answer here.... 
+
+```{r}
+## Look at the data a few different ways (see Ch 9 for more).
+
+
+```
+
+### Step 2
+
+[This should be done by hand on paper, nothing to show in the HTML doc]
+
+
+### Step 3 
+
+##### What variable(s) from the raw data table do not appear at all in the graph?
+
+My answer here.... 
+
+##### What variable(s) in the graph are similar to corresponding variables in the raw data table, but might have been transformed in some way?
+
+My answer here.... 
+
+
+### Step 4
+
+##### Have cases been filtered out?
+
+My answer here.... 
+
+
+##### Have cases been grouped and summarized within groups in any way?
+
+My answer here.... 
+
+
+##### Have any new variables been introduced?  If so, what the relationship between the new variables and existing variables?
+
+My answer here.... 
+
+
+### Step 5
+
+
+Using the BabyNames data set, filter the data to display just the 5 names that you picked.  Then group the cases by year and name, and count how many total births per year were recorded for each of the names (regardless of sex).  
+
+
+### Step 6
+
+[This should be done by hand on paper, nothing to show in the HTML doc]
+
+### Step 7
+
+```{r}
+## Create my glyph ready data set here
+
+
+# inspect the result
+
+
+```
+
+
+### Graph It!
+
+Here's the sample code provided by the book:
+
+```
+GlyphReadyForm %>%
+  ggplot(aes(x = year, y = total, group = name)) + 
+  geom_line(size = 1, alpha = 0.5, aes(color = name)) + 
+  ylab("Popularity") + 
+  xlab("Year") +
+  ggtitle("Popularity of Names Over Time")
+```
+
+If you prepared your `GlyphReadyForm` data set correctly, you should just be able to copy and paste this code. Alternatively, you can use `mplot` or `esquisse` to create your graph. If you choose to use these interactive functions remember, do not include the `mplot` or `esquisse` functions in your RMarkdown document. Instead, use these functions in the console and copy the generated code into your RMarkkdown document. In addition, we want lines, not dots. See examples below. 
+
+
+```{r}
+#My code here 
+
+
+```
+
+
+
+#### Example of Dots versus Lines
+
+We can create a scatter plot for our graph. It's close to what we want, but the line plot that we really want as it is easier to understand.
+
+```
+ggplot( data = GlyphReadyForm, aes(x = year, y = total) ) +
+  geom_point()+
+  aes(colour = name) 
+```
+
+If I use the recommended `ggplot()` command provided by the textbook I get something the following.  If you look closely at the two commands, you'll see a number of similarities in the syntax.  It's always a good idea to study code examples that work in order to see what you can use now or in the future.  For example, you might learn from the command in the text how to apply custom labels to your axes!
+
+```
+GlyphReadyForm %>%
+  ggplot(aes(x = year, y = total, group = name)) + 
+  geom_line(size = 1, alpha = 0.5, aes(color = name)) + 
+  ylab("Popularity") + 
+  xlab("Year")
+```
+
