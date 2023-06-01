@@ -71,11 +71,11 @@ summary(BabyNames)
 
 ##### What variable(s) from the raw data table do not appear at all in the graph?
 
-My answer here.... 
+The variable "sex" does not appear in the graph at all.
 
 ##### What variable(s) in the graph are similar to corresponding variables in the raw data table, but might have been transformed in some way?
 
-My answer here.... 
+The variable "name" has been transformed because only 5 different names are being used in the graph as compared to the data table which contains all the names in the study. 
 
 
 ### Step 4
