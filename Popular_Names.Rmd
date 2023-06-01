@@ -82,17 +82,17 @@ The variable "name" has been transformed because only 5 different names are bein
 
 ##### Have cases been filtered out?
 
-My answer here.... 
+Cases which don't contain the specific 3 names the example graph has choose gets filtered out.
 
 
 ##### Have cases been grouped and summarized within groups in any way?
 
-My answer here.... 
+Cases have been grouped by what the "name" variable is. All cases under a specific name is plotted on the graph. This is done for 3 different names in the example graph. 
 
 
 ##### Have any new variables been introduced?  If so, what the relationship between the new variables and existing variables?
 
-My answer here.... 
+The new variable that has been introduced is "Popularity". However, "Popularity" is synonymous to the variable "count". All the graph does is rename the variable to something the viewer may understand better. 
 
 
 ### Step 5
