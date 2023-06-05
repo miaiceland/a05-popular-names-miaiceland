@@ -3,7 +3,7 @@
 
 ## Instructions 
 - You will complete the Popular Names Activity found in the Data Computing eBook <https://dtkaplan.github.io/DataComputingEbook/project-popular-names.html#project-popular-names>  
-    - You will choose at least five (5) names for the activity. They can be anynames you like.
+    - You will choose at least five (5) names for the activity. They can be any names you like.
     - The plot shown at the beginning is the **goal** for the end of the activity, **NOT** the first task in the activity.
 - Complete the "activity-popular-names-template.Rmd" with your answers. 
   - Steps 2 and 6 do not require you to add anything to the RMarkdown document. Please actually write out these steps. Writing things out is an important step in learning coding.

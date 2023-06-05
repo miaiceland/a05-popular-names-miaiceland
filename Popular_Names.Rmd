@@ -110,6 +110,12 @@ Using the BabyNames data set, filter the data to display just the 5 names that y
 ```{r}
 ## Create my glyph ready data set here
 
+BabyNames1 <- BabyNames %>%
+  filter(name == c("Mia", "John", "Jean", "Jakob", "Athena")) %>%
+  select(name, count, year) %>%
+  group_by(name, year) %>%
+  summarise(sum(count))
+
 
 # inspect the result
 
@@ -134,8 +140,14 @@ If you prepared your `GlyphReadyForm` data set correctly, you should just be abl
 
 
 ```{r}
-#My code here 
 
+ggplot(BabyNames1) +
+  aes(x = year, y = `sum(count)`, colour = name) +
+  geom_line() +
+  scale_color_hue(direction = 1) +
+  labs(x = "Year", y = "Popularity") +
+  ggtitle("Popularity of Names Over Time") +
+  theme_minimal()
 
 ```
 
